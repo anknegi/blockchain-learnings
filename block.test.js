@@ -1,0 +1,22 @@
+const Block = require("./block")
+
+describe('Block', () => {
+    const timestamp = 'a-date',
+    const lastHash = 'foo-hash',
+    const hash = 'bar-hash',
+    const data = ['blockchain','data'],
+    const block = new Block({
+        timestamp,
+        lastHash,
+        hash,
+        data
+    });
+
+    it('has all the properties initilised properly', () => {
+        expect(block.timestamp).isEqual(timestamp);
+        expect(block.lastHash).isEqual(lastHash);
+        expect(block.hash).isEqual(hash);
+        expect(block.data).isEqual(data);
+
+    })
+});
